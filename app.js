@@ -59,7 +59,37 @@ function changePlayer(){
 }
 //Check for a winner.
 function checkForWin(){
-
+    let roundWon = false;
+    //Loop through the winCombinations array.
+    for(let i = 0; i < winCombinations.length; i++){
+        //storing arrays in a temporary variable.
+        const condition = winCombinations[i];
+        const boxA = options[condition[0]];
+        const boxB = options[condition[1]];
+        const boxC = options[condition[2]];
+        //if there is an empty space, continue over the loop.
+        if(boxA == '' || boxB == '' || boxC == ''){
+            continue;
+        }
+        //if the boxes are the same, then there is a winner.
+        if(boxA == boxB && boxB == boxC){
+            roundWon = true;
+            break;
+        }
+    }
+    //if there is a winner, then stop the game.
+    if(roundWon){
+        gameStatus.textContent = `${currentPlayer} won!`;
+        running = false;
+        return;
+    } 
+    //if there is no spaces left, then it is a draw and stop the game.
+    else if(!options.includes('')){
+        gameStatus.textContent = 'Draw!';
+        running = false;
+    } else {
+        changePlayer();
+    }
 }
 
 //Reset the game.
