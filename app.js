@@ -35,7 +35,14 @@ function initializeGame(){
 }
 //Clicking the boxes and updating the boxes.
 function boxClicked(){
-
+    //which ever box is clicked, get the index of that box.
+    const boxIndex = this.getAttribute('boxIndex');
+    //only update the box if nothing is there.
+    if(options[boxIndex] !== '' || !running){
+        return;
+    }
+    updateBox(this, boxIndex);
+    checkForWin();
 }
 
 function updateBox(box, index){
