@@ -93,8 +93,13 @@ function checkForWin(){
 }
 
 //Reset the game.
-function resetGame(){}
-
+function resetGame(){
+    currentPlayer = 'X';
+    options = ['', '', '', '', '', '', '', '', ''];
+    gameStatus.textContent = `${currentPlayer}'s turn`;
+    boxes.forEach(box => box.textContent = '');
+    running = true;
+}
 
 
 
