@@ -1,4 +1,4 @@
-.cell{
+.box{
     width: 75px;
     height: 75px;
     border: 2px solid black;
@@ -17,7 +17,7 @@
     box-shadow: 0 0 0 2px;
 }
 
-#cellContainer{
+#boxContainer{
     display: grid;
     grid-template-columns: repeat(3, auto);
     width: 225px;
