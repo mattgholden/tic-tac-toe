@@ -28,7 +28,7 @@
 #gameContainer{
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    background-color:#26453e;
+    background-color:#2adef2;
     /* background-color: rgb(201, 85, 8); */
     width: 600px;
     height: 600px;
@@ -53,7 +53,7 @@
     border: 1px solid var(--color-set);
     padding: .25em .5em;
     cursor: pointer;
-    background-color: rgb(144, 7, 35);
+    background-color: rgb(24, 109, 43);
     color: white;
     border-color: white;
 }
